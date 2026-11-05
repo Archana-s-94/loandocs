@@ -18,4 +18,4 @@ Java 21, Spring Boot, Spring Data JPA, MySQL, JUnit 5, Maven
 - `GET /documents?customerId=` lists a customer's documents
 
 ## Tests
-Run `./mvnw test` for the JUnit tests on the placeholder logic.
+`./mvnw test` runs unit tests for the placeholder logic and MockMvc controller tests (success, missing placeholder, unknown template, invalid email).
