@@ -3,7 +3,7 @@
 Spring Boot REST API for creating loan document templates with placeholders and generating documents from loan data.
 
 ## Tech stack
-Java 21, Spring Boot, Spring Data JPA, MySQL, JUnit 5, Maven
+Java 21, Spring Boot, Spring Data JPA, MySQL, JUnit 5, MockMvc, Maven, Docker, Kubernetes, Swagger/OpenAPI, GitHub Actions
 
 ## Run locally
 1. Start MySQL on port 3306
@@ -28,3 +28,10 @@ Then open http://localhost:8080/swagger-ui.html
 docker build -t loandocs:1.0 .
 kubectl apply -f k8s/
 kubectl port-forward svc/loandocs 8080:8080
+
+## Loan Document Generator API
+[![CI](https://github.com/Archana-s-94/loandocs/actions/workflows/ci.yaml/badge.svg)](https://github.com/Archana-s-94/loandocs/actions/workflows/ci.yaml)
+
+## CI
+## CI
+GitHub Actions runs on every push to `main` and on pull requests. It runs the tests against a MySQL 8.4 service container, then builds the Docker image.
