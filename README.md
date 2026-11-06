@@ -32,6 +32,7 @@ kubectl port-forward svc/loandocs 8080:8080
 ## Loan Document Generator API
 [![CI](https://github.com/Archana-s-94/loandocs/actions/workflows/ci.yaml/badge.svg)](https://github.com/Archana-s-94/loandocs/actions/workflows/ci.yaml)
 
-## CI
-## CI
-GitHub Actions runs on every push to `main` and on pull requests. It runs the tests against a MySQL 8.4 service container, then builds the Docker image.
+## CI/CD
+GitHub Actions runs on every push to `main` and on pull requests. It runs the tests against a MySQL 8.4 service container, then builds the Docker image. On pushes to `main`, it also publishes the image to GitHub Container Registry.
+
+docker pull ghcr.io/archana-s-94/loandocs:latest
