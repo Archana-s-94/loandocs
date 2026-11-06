@@ -19,3 +19,7 @@ Java 21, Spring Boot, Spring Data JPA, MySQL, JUnit 5, Maven
 
 ## Tests
 `./mvnw test` runs unit tests for the placeholder logic and MockMvc controller tests (success, missing placeholder, unknown template, invalid email).
+
+## Run with Docker
+docker compose up --build
+Then open http://localhost:8080/swagger-ui.html
