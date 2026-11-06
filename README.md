@@ -23,3 +23,8 @@ Java 21, Spring Boot, Spring Data JPA, MySQL, JUnit 5, Maven
 ## Run with Docker
 docker compose up --build
 Then open http://localhost:8080/swagger-ui.html
+
+## Run on Kubernetes (Docker Desktop)
+docker build -t loandocs:1.0 .
+kubectl apply -f k8s/
+kubectl port-forward svc/loandocs 8080:8080
